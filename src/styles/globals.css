@@ -6,6 +6,12 @@
   .terminal-card {
     @apply backdrop-blur-sm;
     text-shadow: 0 0 5px #00ff00;
+    transition: all 0.3s ease;
+  }
+
+  .terminal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.1);
   }
 
   .hacker-button {
@@ -26,11 +32,8 @@
 
   .typewriter {
     overflow: hidden;
-    border-right: 0.15em solid #00ff00;
     white-space: nowrap;
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret 0.75s step-end infinite;
+    animation: typing 1s steps(50, end);
   }
 }
 
