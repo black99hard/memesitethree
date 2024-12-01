@@ -19,13 +19,13 @@ const HackerStats = () => {
             { 
               icon: <Users className="w-8 h-8" />, 
               label: "HOLDERS", 
-              value: "68,791",
+              value: "26,100",
               subtext: "+12% this week" 
             },
             { 
               icon: <DollarSign className="w-8 h-8" />, 
               label: "PRICE", 
-              value: "$0.003472",
+              value: "$0.004715",
               subtext: "USD" 
             },
             { 

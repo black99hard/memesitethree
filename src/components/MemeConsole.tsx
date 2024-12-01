@@ -8,52 +8,52 @@ const MemeConsole = () => {
 
   const memes = [
     { 
-      text: "DOWNLOADING MORE $CTOAD...", 
+      text: "DOWNLOADING MORE $MORTY...", 
       progress: "███████░░░ 70%",
-      art: "🐸"
+      art: "🌀"
     },
     { 
-      text: "HACKING THE TOADVERSE...", 
+      text: "HACKING THE MULTIVERSE...", 
       progress: "██████████ 100%",
       art: "🌌"
     },
     { 
-      text: "ENHANCING TOAD BLOCKCHAIN...", 
+      text: "ENHANCING PORTAL TECHNOLOGY...", 
       progress: "████░░░░░░ 40%",
       art: "⛓️"
     },
     { 
-      text: "MINING RARE PEPES...", 
+      text: "MINING RARE MORTYS...", 
       progress: "████████░░ 80%",
       art: "💎"
     },
     { 
-      text: "RIBBIT.EXE INITIATED...", 
+      text: "PORTAL.EXE INITIATED...", 
       progress: "███████░░░ 70%",
       art: "🚀"
     },
     { 
-      text: "SPREADING TOAD VIBES...", 
+      text: "SPREADING SCHWIFTY VIBES...", 
       progress: "████████░░ 80%",
       art: "✨"
     },
     { 
-      text: "CALCULATING MOON TRAJECTORY...", 
+      text: "CALCULATING DIMENSION JUMPS...", 
       progress: "███████░░░ 70%",
-      art: "🌕"
+      art: "🌀"
     },
     { 
-      text: "DEPLOYING CHILL PROTOCOLS...", 
+      text: "DEPLOYING RICK PROTOCOLS...", 
       progress: "█████████░ 90%",
-      art: "❄️"
+      art: "🧪"
     },
     { 
-      text: "GENERATING TOAD MEMES...", 
+      text: "GENERATING MORTY MEMES...", 
       progress: "████████░░ 80%",
       art: "🎨"
     },
     { 
-      text: "SCANNING FOR PAPER HANDS...", 
+      text: "SCANNING FOR JERRY HANDS...", 
       progress: "██░░░░░░░░ 20%",
       art: "📄"
     }
@@ -68,16 +68,16 @@ const MemeConsole = () => {
     }
   }, [isPaused]);
 
-  const toadFacts = [
-    "Did you know? CTOADs are naturally chill creatures 😎",
-    "Fun fact: 1 $CTOAD = 1 $CTOAD forever 🐸",
-    "CTOAD holders have 100% more swag than average 💫",
-    "This console runs on sustainable toad energy ♻️",
-    "Toads together strong! 💪"
+  const mortyFacts = [
+    "Did you know? MORTYs are naturally schwifty creatures 🌀",
+    "Fun fact: 1 $MORTY = 1 $MORTY forever 🧪",
+    "MORTY holders have 100% more interdimensional swag 💫",
+    "This console runs on sustainable portal energy ♻️",
+    "Mortys together strong! 💪"
   ];
 
   const getRandomFact = () => {
-    return toadFacts[Math.floor(Math.random() * toadFacts.length)];
+    return mortyFacts[Math.floor(Math.random() * mortyFacts.length)];
   };
 
   if (isMinimized) {
@@ -102,7 +102,7 @@ const MemeConsole = () => {
           <div className="bg-green-950/50 p-2 flex items-center justify-between border-b border-green-500/30">
             <div className="flex items-center space-x-2">
               <Terminal className="w-4 h-4 text-green-500" />
-              <span className="text-green-500 font-mono text-sm">ctoad@memeverse</span>
+              <span className="text-green-500 font-mono text-sm">morty@memeverse</span>
             </div>
             <div className="flex items-center space-x-2">
               <button 

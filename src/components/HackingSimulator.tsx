@@ -12,54 +12,109 @@ interface HackingTask {
 }
 
 const ASCII_ART = {
-  pepe: `
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠉⠉⠀⠀⠀⡀⠀⠀⠀⠍⠙⠻⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠠⠀⠂⢰⠟⠄⡡⠀⠀⢈⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠔⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠮⣻⣿⣿
-    ⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⣿
-    ⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⢠⠆⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀���⠀⠀⠀⣰⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⣀⠀⣀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+  morty: `
+    ⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀
+    ⠀⠀⠀⣴⠿⠏⠀⠀⠀⠀⠀⠀⢳⡀⠀⡏⠀⠀⠀⠀⠀⢷
+    ⠀⠀⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀⠀⠀ ⡇
+    ⠀⠀⢸⣯⡭⠁⠸⣛⣟⠆⡴⣻⡲⣿⠀⣸⠀Aw⠀ ⡇
+    ⠀⠀⣟⣿⡭⠀⠀⠀⠀⠀⢱⠀⠀⣿⠀⢹⠀Geez⠀ ⡇
+    ⠀⠀⠙⢿⣯⠄⠀⠀⠀⢀⡀⠀⠀⡿⠀⠀⡇⠀⠀⠀⠀⡼
+    ⠀⠀⠀⠀⠹⣶⠆⠀⠀⠀⠀⠀⡴⠃⠀⠀⠘⠤⣄⣠⠞⠀
+    ⠀⠀⠀⠀⠀⢸⣷⡦⢤⡤⢤⣞⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⢀⣤⣴⣿⣏⠁⠀⠀⠸⣏⢯⣷⣖⣦⡀⠀⠀⠀⠀⠀⠀
   `,
-  doge: `
-     ▄              ▄
-    ▌▒█           ▄▀▒▌
-    ▌▒▒█        ▄▀▒▒▒▐
-   ▐▄█▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-   ▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
- ▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
-▐▒▒▒▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▌
-▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
-▌░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
-▌▒▒▒▄██▄▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▐
-▐▒▒▐▄█▄█▌▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-▐▒▒▐▀▐▀▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▐
- ▌▒▒▀▄▄▄▄▄▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▌
- ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▄▒▒▐
-  ▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▄▒▒▒▒▌
-    ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
-      ▀▄▄▄▄��▄▀▀▀▒▒▒▒▒▄▄▀
-         ▀▀▀▀▀▀▀▀▀▀▀▀
+  rick: `
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⠿⠿⠟⠛⠛⠛⠛⠛⠻⠿⠿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀
+    ⠀⠀⠀⣰⣿⣿⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣆⠀⠀⠀
+    ⠀⠀⣼⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⡄⠀⠀
+    ⠀⢰⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⠀⠀
   `,
-  nyanToad: `
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋  🌈  ≋≋≋≋≋≋≋≋≋
-         🐸
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋  🌈  ≋≋≋≋≋≋≋≋≋
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+  portal: `
+    ⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀
+    ⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀
+    ⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀
+    ⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
+    ⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷
+    ⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁
+    ⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀
+    ⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠿⠟⠛⠉⠀⠀⠀⠀⠀
   `
 };
 
-const getRandomArt = () => {
-  const arts = Object.values(ASCII_ART);
-  return arts[Math.floor(Math.random() * arts.length)];
-};
+const adventureTasks: HackingTask[] = [
+  {
+    name: 'Portal Gun Calibration',
+    lines: [
+      'Initializing portal fluid...',
+      'Calculating interdimensional coordinates...',
+      'Stabilizing quantum tunnels...',
+      'Synchronizing parallel universes...',
+      'Portal successfully calibrated! Ready for adventure!'
+    ],
+    duration: 50,
+    difficulty: 'Easy',
+    reward: 100,
+    memeArt: ASCII_ART.portal
+  },
+  {
+    name: 'Plumbus Repair',
+    lines: [
+      'Analyzing Plumbus configuration...',
+      'Adjusting fleeb juice levels...',
+      'Recalibrating dingle bop...',
+      'Smoothing grumbo...',
+      'Plumbus functionality restored!'
+    ],
+    duration: 45,
+    difficulty: 'Easy',
+    reward: 100
+  },
+  {
+    name: 'Meeseeks Box Debug',
+    lines: [
+      "I'm Mr Meeseeks, look at me!",
+      'Analyzing task complexity...',
+      'Calculating existence duration...',
+      'Optimizing help protocols...',
+      'Existence is pain, but debug complete!'
+    ],
+    duration: 60,
+    difficulty: 'Medium',
+    reward: 200,
+    memeArt: ASCII_ART.morty
+  },
+  {
+    name: 'Microverse Battery Boost',
+    lines: [
+      'Accessing miniature universe...',
+      'Motivating tiny civilizations...',
+      'Increasing power output...',
+      'Optimizing energy conversion...',
+      'Battery efficiency improved!'
+    ],
+    duration: 70,
+    difficulty: 'Hard',
+    reward: 300
+  },
+  {
+    name: 'Interdimensional Cable Hack',
+    lines: [
+      'Scanning infinite channels...',
+      'Bypassing reality firewalls...',
+      'Accessing alternate dimensions...',
+      'Unlocking premium content...',
+      'Infinite channels unlocked!'
+    ],
+    duration: 55,
+    difficulty: 'Medium',
+    reward: 200,
+    memeArt: ASCII_ART.rick
+  }
+];
 
 const HackingSimulator = () => {
   const [text, setText] = useState('');
@@ -76,138 +131,15 @@ const HackingSimulator = () => {
   const [theme, setTheme] = useState<'default' | 'ctoad'>('default');
   const [currentArt, setCurrentArt] = useState<string>('');
   const [isArtAnimating, setIsArtAnimating] = useState(false);
+  const [dimension, setDimension] = useState('C-137');
+  const [alienLanguage, setAlienLanguage] = useState(false);
+  const [completedTasks, setCompletedTasks] = useState<number[]>([]);
+  const [currentTaskProgress, setCurrentTaskProgress] = useState<number>(0);
 
-  const hackingTasks: HackingTask[] = [
-    {
-      name: 'Mainframe Breach',
-      lines: [
-        'Initializing breach sequence...',
-        'Bypassing firewall protocols...',
-        'Cracking encryption keys...',
-        'Accessing mainframe core...',
-        'Mainframe successfully breached!'
-      ],
-      duration: 50,
-      difficulty: 'Easy',
-      reward: 100
-    },
-    {
-      name: 'Crypto Heist',
-      lines: [
-        'Scanning blockchain network...',
-        'Identifying vulnerable nodes...',
-        'Deploying smart contract exploits...',
-        'Mining cryptocurrency tokens...',
-        'Funds successfully extracted!'
-      ],
-      duration: 60,
-      difficulty: 'Medium',
-      reward: 200
-    },
-    {
-      name: 'Database Infiltration',
-      lines: [
-        'Mapping database structure...',
-        'Injecting SQL payloads...',
-        'Bypassing authentication...',
-        'Downloading sensitive data...',
-        'Database compromised!'
-      ],
-      duration: 45,
-      difficulty: 'Easy',
-      reward: 100
-    },
-    {
-      name: 'Satellite Override',
-      lines: [
-        'Establishing uplink to satellite...',
-        'Bypassing orbital security...',
-        'Redirecting communication arrays...',
-        'Downloading classified transmissions...',
-        'Satellite control achieved!'
-      ],
-      duration: 70,
-      difficulty: 'Hard',
-      reward: 300,
-      requiresPassword: 'ORBITAL99'
-    },
-    {
-      name: 'Neural Network Hack',
-      lines: [
-        'Connecting to AI mainframe...',
-        'Analyzing neural pathways...',
-        'Injecting cognitive override...',
-        'Rewriting core directives...',
-        'AI system compromised!'
-      ],
-      duration: 65,
-      difficulty: 'Medium',
-      reward: 200
-    },
-    {
-      name: 'CTOAD Network Infiltration',
-      lines: [
-        'Connecting to $CTOAD network...',
-        'Bypassing chill security protocols...',
-        'Accessing cold-blooded vault systems...',
-        'Analyzing 1,000,000 SOL transactions...',
-        'Successfully infiltrated the amphibian network!',
-        '🐸 Chillin\' like a villain 🐸'
-      ],
-      duration: 75,
-      difficulty: 'Hard',
-      reward: 400,
-      requiresPassword: 'CHILLTOAD'
-    },
-    {
-      name: 'Pepe Rare Collection Hack',
-      lines: [
-        'Accessing rare Pepe database...',
-        'Bypassing meme authentication...',
-        'Downloading rarest Pepes...',
-        'Encrypting stolen memes...',
-        'Rare Pepe collection acquired!',
-        'FeelsGoodMan.jpg'
-      ],
-      duration: 55,
-      difficulty: 'Medium',
-      reward: 250,
-      memeArt: ASCII_ART.pepe
-    },
-    {
-      name: 'Doge Coin Vault',
-      lines: [
-        'Much connecting...',
-        'Very bypass security...',
-        'Such hacking...',
-        'Wow infiltration...',
-        'Many coins stolen!',
-        'To the moon! 🚀'
-      ],
-      duration: 60,
-      difficulty: 'Medium',
-      reward: 300,
-      memeArt: ASCII_ART.doge
-    },
-    {
-      name: 'Nyan Toad Takeover',
-      lines: [
-        '🌈 Initializing rainbow connection...',
-        '🐸 Deploying amphibian protocols...',
-        '🎵 Overriding space-time continuum...',
-        '✨ Spreading toad magic...',
-        '🚀 Nyan Toad transformation complete!',
-        '🐸 Ribbit through space! 🌈'
-      ],
-      duration: 65,
-      difficulty: 'Hard',
-      reward: 350,
-      memeArt: ASCII_ART.nyanToad
-    }
-  ];
+  const hackingTasks: HackingTask[] = adventureTasks;
 
   useEffect(() => {
-    if (currentLine >= hackingTasks[currentTask].lines.length) return;
+    if (!isHacking || currentLine >= hackingTasks[currentTask].lines.length) return;
 
     const line = hackingTasks[currentTask].lines[currentLine];
     let charIndex = 0;
@@ -221,19 +153,35 @@ const HackingSimulator = () => {
         setTimeout(() => {
           setText(prev => prev + '\n');
           setCurrentLine(prev => prev + 1);
+          setCurrentTaskProgress(prev => prev + (100 / hackingTasks[currentTask].lines.length));
+          
+          // Check if task is complete
+          if (currentLine === hackingTasks[currentTask].lines.length - 1) {
+            setTimeout(() => {
+              completeTask(currentTask);
+            }, 1000);
+          }
         }, 500);
       }
     }, 50);
 
     return () => clearInterval(interval);
-  }, [currentLine, currentTask]);
+  }, [currentLine, currentTask, isHacking]);
+
+  const completeTask = (taskIndex: number) => {
+    setCompletedTasks(prev => [...prev, taskIndex]);
+    setScore(prev => prev + hackingTasks[taskIndex].reward);
+    setIsHacking(false);
+    checkAchievements(hackingTasks[taskIndex].name);
+    playSound('success');
+  };
 
   const handleTaskSelect = (taskIndex: number) => {
     setText('');
     setCurrentLine(0);
     setCurrentTask(taskIndex);
     setIsHacking(true);
-    setShowPrompt(false);
+    setCurrentTaskProgress(0);
     
     const task = hackingTasks[taskIndex];
     if (task.memeArt) {
@@ -256,6 +204,9 @@ achievements - Show your achievements
 upgrade - Access the upgrade shop
 scan - Scan for vulnerable systems
 ctoad - Activate CTOAD mode
+dimension - Change dimension
+alien - Toggle alien translator
+inventory - Check inventory
 `);
           break;
         case 'stats':
@@ -287,8 +238,24 @@ Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
           break;
         case 'ctoad':
           setTheme('ctoad');
-          displayArtAnimation(ASCII_ART.nyanToad, 5000);
-          setText(prev => `${prev}\n🐸 Chill Toad Mode Activated 🐸`);
+          displayArtAnimation(ASCII_ART.portal, 5000);
+          setText(prev => `${prev}\n🌀 Portal Mode Activated 🌀`);
+          break;
+        case 'dimension':
+          changeDimension();
+          break;
+        case 'alien':
+          setAlienLanguage(!alienLanguage);
+          setText(prev => `${prev}\n${alienLanguage ? 'Translator disabled' : 'Alien translator activated'}`);
+          break;
+        case 'inventory':
+          setText(`Current Inventory:
+- Portal Gun (${Math.floor(Math.random() * 100)}% charged)
+- Plumbus
+- Flask of Mystery Liquid
+- Interdimensional Goggles
+Current Dimension: ${dimension}
+`);
           break;
         default:
           setText(prev => prev + '\nUnknown command: ' + userInput);
@@ -316,12 +283,12 @@ Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
     
     if (!achievements.includes('First Hack') && score === 0) {
       newAchievements.push('First Hack');
-      displayArtAnimation(ASCII_ART.doge, 3000);
+      displayArtAnimation(ASCII_ART.rick, 3000);
     }
     
     if (!achievements.includes('Master Hacker') && score >= 1000) {
       newAchievements.push('Master Hacker');
-      displayArtAnimation(ASCII_ART.pepe, 4000);
+      displayArtAnimation(ASCII_ART.morty, 4000);
     }
     
     if (newAchievements.length > 0) {
@@ -354,11 +321,19 @@ Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
     }, duration);
   };
 
+  const changeDimension = () => {
+    const dimensions = ['C-137', 'D-99', 'J19ζ7', 'K-83'];
+    const newDimension = dimensions[Math.floor(Math.random() * dimensions.length)];
+    setDimension(newDimension);
+    setText(prev => `${prev}\n🌀 Transported to Dimension ${newDimension}`);
+    displayArtAnimation(ASCII_ART.portal, 3000);
+  };
+
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
         <div className={`terminal-card p-4 border-2 
-          ${theme === 'ctoad' ? 'border-purple-500 bg-black/90' : 'border-green-500 bg-black/80'}
+          border-green-500 bg-black/80
           min-h-[400px]`}>
           {isArtAnimating && (
             <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
@@ -385,8 +360,7 @@ Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
             </button>
           </div>
           
-          <pre className={`font-mono whitespace-pre-wrap min-h-[300px]
-            ${theme === 'ctoad' ? 'text-purple-400' : 'text-green-500'}`}>
+          <pre className="font-mono whitespace-pre-wrap min-h-[300px] text-green-500">
             {text}
             {!isHacking && (
               <div className="mt-4">
@@ -403,29 +377,55 @@ Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
             <span className="animate-pulse">▊</span>
           </pre>
 
-          {showPrompt && (
-            <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-              {hackingTasks.map((task, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleTaskSelect(index)}
-                  className={`px-4 py-2 border border-green-500 
-                           text-green-500 hover:bg-green-500/30 transition-colors
-                           rounded font-mono text-sm
-                           ${task.difficulty === 'Easy' ? 'bg-green-500/20' :
-                             task.difficulty === 'Medium' ? 'bg-yellow-500/20' :
-                             'bg-red-500/20'}`}
-                >
-                  <div>{task.name}</div>
-                  <div className="text-xs mt-1">
-                    Difficulty: {task.difficulty}
-                    <br/>
-                    Reward: {task.reward} pts
+          {/* Task Grid - Always visible */}
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            {hackingTasks.map((task, index) => (
+              <button
+                key={index}
+                onClick={() => handleTaskSelect(index)}
+                disabled={isHacking && currentTask === index}
+                className={`px-4 py-2 border 
+                  ${isHacking && currentTask === index 
+                    ? 'border-yellow-500 bg-yellow-500/10' 
+                    : completedTasks.includes(index)
+                      ? 'border-green-500 bg-green-500/10'
+                      : 'border-green-500 hover:bg-green-500/30'
+                  }
+                  transition-colors rounded font-mono text-sm
+                  ${task.difficulty === 'Easy' ? 'text-green-500' :
+                    task.difficulty === 'Medium' ? 'text-yellow-500' :
+                    'text-red-500'}`}
+              >
+                <div className="flex justify-between items-center">
+                  <span>{task.name}</span>
+                  {completedTasks.includes(index) && (
+                    <span className="text-green-500">✓</span>
+                  )}
+                </div>
+                <div className="text-xs mt-1">
+                  Difficulty: {task.difficulty}
+                  <br/>
+                  Reward: {task.reward} pts
+                </div>
+                {isHacking && currentTask === index && (
+                  <div className="mt-2 bg-black/50 rounded-full h-1">
+                    <div 
+                      className="bg-yellow-500 h-full rounded-full transition-all duration-300"
+                      style={{ width: `${currentTaskProgress}%` }}
+                    />
                   </div>
-                </button>
-              ))}
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Status Display */}
+          <div className="mt-4 text-green-500 text-sm">
+            <div className="flex justify-between items-center">
+              <span>Completed Tasks: {completedTasks.length}/{hackingTasks.length}</span>
+              <span>Total Score: {score}</span>
             </div>
-          )}
+          </div>
 
           {showMiniGames && (
             <div className="mt-4 border-t border-green-500 pt-4">

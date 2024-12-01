@@ -110,3 +110,92 @@ button:hover .animate-pulse {
 button:hover .animate-spin-slow {
   animation: spin-slow 2s linear infinite;
 }
+
+/* TV Static Effect */
+.tv-static {
+  background-image: repeating-radial-gradient(
+    circle at 17% 32%,
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 2px,
+    transparent 100px
+  );
+  animation: tv-static-animation 0.1s infinite;
+}
+
+@keyframes tv-static-animation {
+  0% { background-position: 0 0; }
+  20% { background-position: 20% -20%; }
+  40% { background-position: -20% 20%; }
+  60% { background-position: 10% 30%; }
+  80% { background-position: -10% -10%; }
+  100% { background-position: 0 0; }
+}
+
+/* TV Turn On Animation */
+@keyframes tv-on {
+  0% {
+    transform: scale(0.8) translateY(100%);
+    filter: brightness(0) blur(20px);
+  }
+  50% {
+    transform: scale(1.1) translateY(0);
+    filter: brightness(2) blur(5px);
+  }
+  75% {
+    transform: scale(0.95) translateY(0);
+    filter: brightness(1.5) blur(2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    filter: brightness(1) blur(0);
+  }
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 0 0 0 #0f0;
+  }
+  2% {
+    transform: translate(-2px, 2px);
+    text-shadow: 2px -2px 0 #0f0;
+  }
+  4% {
+    transform: translate(2px, -2px);
+    text-shadow: -2px 2px 0 #0f0;
+  }
+  6% {
+    transform: translate(0);
+    text-shadow: 0 0 0 #0f0;
+  }
+}
+
+.animate-glitch {
+  animation: glitch 1s infinite;
+}
+
+.animate-tv-on {
+  animation: tv-on 2s ease-out;
+}
+
+/* Portal Swirl Effect */
+@keyframes portal-swirl {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.portal-enter {
+  animation: portal-swirl 1s ease-out forwards;
+}

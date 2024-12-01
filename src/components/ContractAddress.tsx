@@ -3,7 +3,7 @@ import { Copy, Check } from 'lucide-react';
 
 const ContractAddress = () => {
   const [copied, setCopied] = useState(false);
-  const tokenAddress = "Mse6hcdxMWgQgEW7AcidAYw2G5ucW5fC8XK3NWYpump";
+  const tokenAddress = "9rbVug7zTt4UPb1YuasTVUJVcaeb9JgJdJ2ejf7pump";
 
   // Function to shorten address
   const shortenAddress = (address: string) => {

@@ -5,19 +5,19 @@ const SocialLinks = () => {
   const socials = [
     { 
       icon: <Twitter className="w-6 h-6" />, 
-      link: "https://x.com/CTOAD_SOL", 
+      link: "https://x.com/Mortysolanacto", 
       label: "Twitter",
       color: "hover:text-blue-400"
     },
     { 
       icon: <Send className="w-6 h-6" />, 
-      link: "https://t.me/ctoad_solana", 
+      link: "https://t.me/Mortysolanacto", 
       label: "Telegram",
       color: "hover:text-sky-400"
     },
     { 
       icon: <BarChart className="w-6 h-6" />, 
-      link: "https://dexscreener.com/solana/scqxaqv5fy2cgfky6mxfk2qzbdtc3ta92j3tsg4uhg4", 
+      link: "https://dexscreener.com/solana/YOUR_MORTY_CONTRACT", 
       label: "DexScreener",
       color: "hover:text-green-400"
     }
