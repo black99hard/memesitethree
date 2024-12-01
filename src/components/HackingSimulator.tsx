@@ -8,7 +8,58 @@ interface HackingTask {
   difficulty: 'Easy' | 'Medium' | 'Hard';
   reward: number;
   requiresPassword?: string;
+  memeArt?: string;
 }
+
+const ASCII_ART = {
+  pepe: `
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠉⠉⠀⠀⠀⡀⠀⠀⠀⠍⠙⠻⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠠⠀⠂⢰⠟⠄⡡⠀⠀⢈⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠔⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠮⣻⣿⣿
+    ⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣻⣿⣿
+    ⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⢠⠆⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀���⠀⠀⠀⣰⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣀⣀⠀⣀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+  `,
+  doge: `
+     ▄              ▄
+    ▌▒█           ▄▀▒▌
+    ▌▒▒█        ▄▀▒▒▒▐
+   ▐▄█▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+   ▄▄▀▒▒▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+ ▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+▐▒▒▒▄▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄▒▌
+▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
+▌░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
+▌▒▒▒▄██▄▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▐
+▐▒▒▐▄█▄█▌▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
+▐▒▒▐▀▐▀▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▐
+ ▌▒▒▀▄▄▄▄▄▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▒▌
+ ▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▄▒▒▐
+  ▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▄▒▒▒▒▌
+    ▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀
+      ▀▄▄▄▄��▄▀▀▀▒▒▒▒▒▄▄▀
+         ▀▀▀▀▀▀▀▀▀▀▀▀
+  `,
+  nyanToad: `
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋  🌈  ≋≋≋≋≋≋≋≋≋
+         🐸
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋  🌈  ≋≋≋≋≋≋≋≋≋
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+    ≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+  `
+};
+
+const getRandomArt = () => {
+  const arts = Object.values(ASCII_ART);
+  return arts[Math.floor(Math.random() * arts.length)];
+};
 
 const HackingSimulator = () => {
   const [text, setText] = useState('');
@@ -22,6 +73,9 @@ const HackingSimulator = () => {
   const [achievements, setAchievements] = useState<string[]>([]);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [showMiniGames, setShowMiniGames] = useState(false);
+  const [theme, setTheme] = useState<'default' | 'ctoad'>('default');
+  const [currentArt, setCurrentArt] = useState<string>('');
+  const [isArtAnimating, setIsArtAnimating] = useState(false);
 
   const hackingTasks: HackingTask[] = [
     {
@@ -89,6 +143,66 @@ const HackingSimulator = () => {
       duration: 65,
       difficulty: 'Medium',
       reward: 200
+    },
+    {
+      name: 'CTOAD Network Infiltration',
+      lines: [
+        'Connecting to $CTOAD network...',
+        'Bypassing chill security protocols...',
+        'Accessing cold-blooded vault systems...',
+        'Analyzing 1,000,000 SOL transactions...',
+        'Successfully infiltrated the amphibian network!',
+        '🐸 Chillin\' like a villain 🐸'
+      ],
+      duration: 75,
+      difficulty: 'Hard',
+      reward: 400,
+      requiresPassword: 'CHILLTOAD'
+    },
+    {
+      name: 'Pepe Rare Collection Hack',
+      lines: [
+        'Accessing rare Pepe database...',
+        'Bypassing meme authentication...',
+        'Downloading rarest Pepes...',
+        'Encrypting stolen memes...',
+        'Rare Pepe collection acquired!',
+        'FeelsGoodMan.jpg'
+      ],
+      duration: 55,
+      difficulty: 'Medium',
+      reward: 250,
+      memeArt: ASCII_ART.pepe
+    },
+    {
+      name: 'Doge Coin Vault',
+      lines: [
+        'Much connecting...',
+        'Very bypass security...',
+        'Such hacking...',
+        'Wow infiltration...',
+        'Many coins stolen!',
+        'To the moon! 🚀'
+      ],
+      duration: 60,
+      difficulty: 'Medium',
+      reward: 300,
+      memeArt: ASCII_ART.doge
+    },
+    {
+      name: 'Nyan Toad Takeover',
+      lines: [
+        '🌈 Initializing rainbow connection...',
+        '🐸 Deploying amphibian protocols...',
+        '🎵 Overriding space-time continuum...',
+        '✨ Spreading toad magic...',
+        '🚀 Nyan Toad transformation complete!',
+        '🐸 Ribbit through space! 🌈'
+      ],
+      duration: 65,
+      difficulty: 'Hard',
+      reward: 350,
+      memeArt: ASCII_ART.nyanToad
     }
   ];
 
@@ -120,6 +234,11 @@ const HackingSimulator = () => {
     setCurrentTask(taskIndex);
     setIsHacking(true);
     setShowPrompt(false);
+    
+    const task = hackingTasks[taskIndex];
+    if (task.memeArt) {
+      displayArtAnimation(task.memeArt, 4000);
+    }
   };
 
   const handleInputSubmit = (e: React.KeyboardEvent) => {
@@ -136,6 +255,7 @@ sound - Toggle sound effects
 achievements - Show your achievements
 upgrade - Access the upgrade shop
 scan - Scan for vulnerable systems
+ctoad - Activate CTOAD mode
 `);
           break;
         case 'stats':
@@ -143,7 +263,7 @@ scan - Scan for vulnerable systems
 Level: ${level}
 Score: ${score}
 Achievements: ${achievements.length}
-Active Upgrades: ${activeUpgrades.join(', ')}
+Active Upgrades: ${activeUpgrades ? activeUpgrades.join(', ') : 'None'}
 `);
           break;
         case 'clear':
@@ -162,7 +282,13 @@ Active Upgrades: ${activeUpgrades.join(', ')}
           setText(prev => `${prev}\nUpgrade shop accessed!`);
           break;
         case 'scan':
+          displayArtAnimation(getRandomArt(), 3000);
           setText(prev => `${prev}\nScan initiated...`);
+          break;
+        case 'ctoad':
+          setTheme('ctoad');
+          displayArtAnimation(ASCII_ART.nyanToad, 5000);
+          setText(prev => `${prev}\n🐸 Chill Toad Mode Activated 🐸`);
           break;
         default:
           setText(prev => prev + '\nUnknown command: ' + userInput);
@@ -190,10 +316,12 @@ Active Upgrades: ${activeUpgrades.join(', ')}
     
     if (!achievements.includes('First Hack') && score === 0) {
       newAchievements.push('First Hack');
+      displayArtAnimation(ASCII_ART.doge, 3000);
     }
     
     if (!achievements.includes('Master Hacker') && score >= 1000) {
       newAchievements.push('Master Hacker');
+      displayArtAnimation(ASCII_ART.pepe, 4000);
     }
     
     if (newAchievements.length > 0) {
@@ -212,10 +340,34 @@ Active Upgrades: ${activeUpgrades.join(', ')}
     </div>
   );
 
+  function startMiniGame(arg0: string): void {
+    throw new Error('Function not implemented.');
+  }
+
+  const displayArtAnimation = (art: string, duration: number = 3000) => {
+    setIsArtAnimating(true);
+    setCurrentArt(art);
+    
+    setTimeout(() => {
+      setIsArtAnimating(false);
+      setCurrentArt('');
+    }, duration);
+  };
+
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
-        <div className="terminal-card p-4 border-2 border-green-500 bg-black/80 min-h-[400px]">
+        <div className={`terminal-card p-4 border-2 
+          ${theme === 'ctoad' ? 'border-purple-500 bg-black/90' : 'border-green-500 bg-black/80'}
+          min-h-[400px]`}>
+          {isArtAnimating && (
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                          bg-black/90 p-4 rounded-lg border border-green-500 z-50">
+              <pre className="text-green-500 font-mono text-sm whitespace-pre">
+                {currentArt}
+              </pre>
+            </div>
+          )}
           <div className="flex items-center mb-2">
             <Terminal className="w-4 h-4 text-green-500 mr-2" />
             <span className="text-green-500 font-mono text-sm">cyberhack.exe</span>
@@ -233,7 +385,8 @@ Active Upgrades: ${activeUpgrades.join(', ')}
             </button>
           </div>
           
-          <pre className="font-mono text-green-500 whitespace-pre-wrap min-h-[300px]">
+          <pre className={`font-mono whitespace-pre-wrap min-h-[300px]
+            ${theme === 'ctoad' ? 'text-purple-400' : 'text-green-500'}`}>
             {text}
             {!isHacking && (
               <div className="mt-4">

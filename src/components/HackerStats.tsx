@@ -19,19 +19,19 @@ const HackerStats = () => {
             { 
               icon: <Users className="w-8 h-8" />, 
               label: "HOLDERS", 
-              value: "1,337",
+              value: "68,791",
               subtext: "+12% this week" 
             },
             { 
               icon: <DollarSign className="w-8 h-8" />, 
               label: "PRICE", 
-              value: "$0.00008",
+              value: "$0.003472",
               subtext: "USD" 
             },
             { 
               icon: <TrendingUp className="w-8 h-8" />, 
               label: "MARKET CAP", 
-              value: "$80,000",
+              value: "$3,500,000",
               subtext: "Fully Diluted" 
             },
           ].map((stat, index) => (

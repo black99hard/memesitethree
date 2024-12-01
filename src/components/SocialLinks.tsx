@@ -1,27 +1,49 @@
 import React from 'react';
-import { Twitter, Github, MessageSquare } from 'lucide-react';
+import { Twitter, Send, BarChart } from 'lucide-react';
 
 const SocialLinks = () => {
   const socials = [
-    { icon: <Twitter className="w-6 h-6" />, link: "https://twitter.com/ptoken", label: "Twitter" },
-    { icon: <Github className="w-6 h-6" />, link: "https://github.com/ptoken", label: "Github" },
-    { icon: <MessageSquare className="w-6 h-6" />, link: "https://discord.gg/ptoken", label: "Discord" }
+    { 
+      icon: <Twitter className="w-6 h-6" />, 
+      link: "https://x.com/CTOAD_SOL", 
+      label: "Twitter",
+      color: "hover:text-blue-400"
+    },
+    { 
+      icon: <Send className="w-6 h-6" />, 
+      link: "https://t.me/ctoad_solana", 
+      label: "Telegram",
+      color: "hover:text-sky-400"
+    },
+    { 
+      icon: <BarChart className="w-6 h-6" />, 
+      link: "https://dexscreener.com/solana/scqxaqv5fy2cgfky6mxfk2qzbdtc3ta92j3tsg4uhg4", 
+      label: "DexScreener",
+      color: "hover:text-green-400"
+    }
   ];
 
   return (
-    <div className="fixed top-4 right-4 flex space-x-4">
+    <div className="fixed top-4 right-4 flex space-x-4 z-50">
       {socials.map((social, index) => (
         <a
           key={index}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 border border-green-500 bg-black/60 hover:bg-green-500/20 transition-all duration-300 group"
+          className={`
+            inline-flex items-center justify-center p-2 
+            border border-green-500 bg-black/60 
+            hover:bg-green-500/20 transition-all duration-300 
+            cursor-pointer rounded-md
+            transform hover:scale-110 active:scale-95
+          `}
           aria-label={social.label}
+          title={social.label}
         >
-          <div className="text-green-500 group-hover:text-green-400">
+          <span className={`text-green-500 ${social.color} transition-colors duration-300`}>
             {social.icon}
-          </div>
+          </span>
         </a>
       ))}
     </div>
